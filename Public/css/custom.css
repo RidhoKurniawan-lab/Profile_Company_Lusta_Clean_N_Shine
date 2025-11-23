@@ -1,0 +1,143 @@
+html,body {
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+/* color custom  */
+.border-yellow{
+    border-color: #facf22;
+}
+.bg-yellow{
+    background-color: #facf22
+}
+.bg-nav{
+    background-color: rgba(255, 255, 255, 0);
+}
+.bg-core-light{
+    background-color: #facf22;
+}
+.text-yellow{
+    color: #facf22;
+}
+.bg-white{
+    background-color: #ffffffff;
+}
+/* color custom  */
+
+/* text styling  */
+.text-justify{
+    text-align: justify;
+}
+/* text styling  */
+
+/* sosmed  */
+.sosmed {
+    width: 50px;
+    height: 50px;
+}
+/* sosmed  */
+
+/* nav  */
+.nav-item {
+  cursor: pointer;
+}
+/* nav  */
+
+/* hover btn  */
+.hover-btn:hover{
+    background-color: #ffe168ff;
+}
+.hover-btn-blue:hover{
+    background-color: #ffe168ff;
+}
+/* hover btn  */
+
+/* animasi scroll section */
+.anim-scroll{
+    opacity: 0;
+    transition: all 1s ease;
+}
+.anim-scroll.X.shows{
+    opacity: 1;
+    transform: translateX(0);
+}
+.anim-scroll.Y.shows{
+    opacity: 1;
+    transform: translateY(0);
+}
+.anim-scroll.right{
+    transform: translateX(100px);
+}
+.anim-scroll.left{
+    transform: translateX(-100px);
+}
+.anim-scroll.bottom{
+    transform: translateY(100px);
+}
+/* animasi scroll section */
+
+/* id styling  */
+#navMenu {
+  position: relative;
+}
+#navHighlight {
+  z-index: 0;
+}
+#overlay{
+    z-index: 1020;
+}
+#overlay-hero{
+    display: none;
+    background-color: rgba(0,0,0,0.3)
+}
+#burger{
+    display: none;
+}
+#sidebar{
+    width: 25%;
+    right: -370px; 
+    transition: 1s; 
+    z-index: 1050;
+}
+#bg-nav-item{
+    height: 70%; 
+    top: 15%; 
+    left: 0; 
+    transition: all 0.8s ease;
+}
+
+/* login page  */
+#password-eye{
+    top:72%; 
+    right:3%; 
+    cursor: pointer;
+}
+/* login page  */
+
+/* id styling  */
+
+/* media */
+@media (max-width: 1090px){
+    #burger{
+        display: block !important;
+    }
+    #menu{
+        display: none !important;
+    }
+}
+@media (max-width: 750px){
+    #hero-kiri{
+        position: absolute;
+        text-align: center;
+    }.text-hitam{
+        color: #ffffffff !important;
+    }#overlay-hero{
+        display: block;
+    }#sidebar{
+        width: 40%;
+    }
+}
+/* media  */
+
+
+    
