@@ -13,11 +13,15 @@ class App {
 
             $this->controller = $url[0]. 'Controller';
             unset($url[0]);
+            var_dump($this->controller);
+            die();
         }
 
         require_once '../app/controllers/' . $this->controller .'.php';
 
         $this->controller = new $this->controller();
+                    var_dump($this->controller);
+            die();
 
 
         if (isset($url[1]) && method_exists($this->controller, $url[1])) {  

@@ -1,11 +1,12 @@
 <?php
 
 class UserController extends Controller {
-    private $model_contact;
+    // private $model_contact;
 
-    public function __construct() {
-    $this->model_contact = $this->model('Contact_Model');
-    }
+    // public function __construct() {
+    // // $this->model_contact = $this->model('contact_Model');
+    // }
+    
     public function index() {
         $this->view("users/home");
     }
@@ -23,29 +24,29 @@ class UserController extends Controller {
         $this->view("users/contact");
     }
 
-    public function contact_form(){
+    // public function contact_form(){
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
-                header('Content-Type: application/json');
+    //     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //         if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
+    //             header('Content-Type: application/json');
 
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-                $message = $_POST['message'];
+    //             $name = $_POST['name'];
+    //             $email = $_POST['email'];
+    //             $message = $_POST['message'];
 
-                $data = $this->model_contact->insert($name, $email, $message);
+    //             $data = $this->model_contact->insert($name, $email, $message);
 
-                if ($data) {
+    //             if ($data) {
 
-                    $response = [
-                        'status' => true
-                    ];
-                    echo json_encode($response);
-                }else{
-                    echo json_encode(['status' => false]);
-                }
-            }
-        }
-    }
+    //                 $response = [
+    //                     'status' => true
+    //                 ];
+    //                 echo json_encode($response);
+    //             }else{
+    //                 echo json_encode(['status' => false]);
+    //             }
+    //         }
+    //     }
+    // }
     
 }
